@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def required_user
     if !logged_in?
-      flash[:alert] = "You must be logged int to perform this action"
+      flash[:error] = "You must be logged int to perform this action"
       redirect_to login_path
     end
   end
